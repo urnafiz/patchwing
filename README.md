@@ -1,4 +1,4 @@
-# Patchwing – Essential Debug Tools
+# Patchwing – Essential Debug Tools for WordPress
 
 Patchwing is a lightweight, powerful developer tool designed to make **WordPress debugging** simple and effective for site administrators. Instead of digging through complicated configuration files, it provides clear, real-time data to help you resolve issues like the white screen of death or optimize site performance.
 
