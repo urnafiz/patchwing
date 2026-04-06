@@ -269,6 +269,14 @@ class Core {
             <div class="page-title">
                 <h1><?php esc_html_e( 'Settings', 'patchwing' ); ?></h1>
             </div>
+            <?php
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce is verified by WordPress core via options.php for settings forms; this is a read-only redirect flag set by WP itself.
+            $settings_updated = isset( $_GET['settings-updated'] ) ? sanitize_text_field( wp_unslash( $_GET['settings-updated'] ) ) : '';
+            if ( $settings_updated ) : ?>
+            <div class="notice notice-success is-dismissible">
+                <p><?php esc_html_e( 'Settings saved successfully.', 'patchwing' ); ?></p>
+            </div>
+            <?php endif; ?>
             <form method="post" action="options.php">
                 <?php
                 settings_fields( 'patchwing_settings_group' );

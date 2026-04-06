@@ -5,7 +5,7 @@
  * Description: 		Patchwing is a lightweight, powerful tool designed to make WordPress debugging simple and effective for site administrators. Instead of wasting time digging through complicated configuration files, Patchwing provides clear debug data right when you need it. Whether you are fixing the infamous white screen of death or working to boost site performance, Patchwing helps you debug issues quickly and keep your WordPress site running smoothly.
  * Author: 				Nafiz
  * Author URI: 			https://profiles.wordpress.org/urnafiz/
- * Version: 			1.0.0
+ * Version: 			1.0.1
  * Requires PHP: 		7.4
  * Requires at least: 	5.9
  * Tested up to: 		6.9
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Set plugin version.
-define( 'PATCHWING_PLUGIN_VERSION', '1.0.0' );
+define( 'PATCHWING_PLUGIN_VERSION', '1.0.1' );
 
 // Set plugin file.
 define( 'PATCHWING_PLUGIN_FILE', __FILE__ );

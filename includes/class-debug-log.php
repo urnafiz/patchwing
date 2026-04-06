@@ -32,7 +32,29 @@ class Debug_Log {
             wp_die( 'Unauthorized' );
         }
 
-        $wp_config = ABSPATH . 'wp-config.php';
+        // $wp_config = ABSPATH . 'wp-config.php';
+        // Auto-detect wp-config.php (Cross-Platform & Secure)
+        $wp_config = '';
+        $current_path = ABSPATH . 'wp-config.php';
+
+        // Use untrailingslashit to ensure dirname() works consistently on all OS
+        $parent_dir = dirname(untrailingslashit(ABSPATH));
+        $parent_path = $parent_dir . DIRECTORY_SEPARATOR . 'wp-config.php';
+        $parent_settings = $parent_dir . DIRECTORY_SEPARATOR . 'wp-settings.php';
+
+        if (file_exists($current_path)) {
+            $wp_config = $current_path;
+        }
+        elseif (@file_exists($parent_path) && !file_exists($parent_settings)) {
+            // Only move up if wp-settings.php is NOT there (standard WP security practice)
+            $wp_config = $parent_path;
+        }
+
+        // Normalize path for consistent internal WP handling
+        if ($wp_config) {
+            $wp_config = wp_normalize_path($wp_config);
+        }
+
         $action_performed = false;
 
         // wp_filesystem

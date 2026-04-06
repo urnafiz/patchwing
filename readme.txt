@@ -4,7 +4,7 @@ Tags: debug, performance, database, developer, logs
 Requires at least: 5.9
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ The plugin provides a overview of your environment while allowing deep dives int
 == Features ==
 
 * **System Dashboard:** At a glance view of WordPress version, PHP version, MySQL, cURL, GD Library status, Multisite status, active/inactive plugin counts and WP Memory Limit.
-* **Real time Server Metrics:** Monitor CPU Load with status indicators, IP Address, Web Server type and Memory Usage relative to your PHP limit.
+* **Real time Server Metrics:** Monitor your system health with live tracking of CPU load and actual RAM usage, featuring visual status indicators alongside your IP address and web server type for complete transparency.
 * **Advanced PHP Info:** Detailed breakdown of key configuration settings including `memory_limit`, `upload_max_filesize`, `max_execution_time` and active PHP extensions.
 * **Integrated Debug Log:** Monitor, filter and manage your PHP error logs directly from WordPress admin. Includes one click "Clear Log" and "Enable/Disable Log" functionality.
 * **Database Audit:** View all database tables, storage engines, collation and data/index lengths. Includes engine migration tool.
@@ -40,6 +40,11 @@ The plugin provides a overview of your environment while allowing deep dives int
 5. Performance: Memory usage and load time tracking.
 
 == Changelog ==
+
+= 1.0.1 =
+* Enhanced plugin settings page.
+* Improved accuracy for real time CPU and Memory usage reporting.
+* Added support for config file from one directory above WordPress root.
 
 = 1.0.0 =
 * Initial release.
